@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e3a5f; /* Deep Blue */
+            color: #ffcc80;  /* Soft Orange */
+        }
+    
+        header {
+            background: #0d47a1;  /* Dark Blue */
+            color: white;
+            text-align: center;
+            padding: 17px;
+        }
+    
+        nav ul {
+            list-style: none;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            display: flex;
+            justify-content: left;
+            background: #1565c0; /* Medium Blue */
+            margin: 0;
+        }
+    
+        nav ul li {
+            margin: 0 15px;
+        }
+    
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+        }
+    
+        nav ul li a:hover {
+            background: #ff9800;  /* Bright Orange */
+            border-radius: 5px;
+        }
+    
+        section {
+            padding: 15px;
+            margin: 15px;
+            background: #1976d2; /* Vibrant Blue */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+    
+        #intro {
+            padding: 10px;
+            background: #1976d2; /* Vibrant Blue */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin-left: 15px;
+            margin-top: 15px;
+            color: white;
+        }
+    
+        .C2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .C2 button {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 15px;
+            background-color: #ff6f00;  /* Dark Orange */
+            border-radius: 5px;
+        }
+    
+        .C2 button:hover {
+            background: #ffcc80; /* Soft Orange */
+            border-radius: 5px;
+        }
+    
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+    
+        #gallery button {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            margin: 0;
+            background: #1565c0; /* Medium Blue */
+        }
+    
+        .image-gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        footer {
+            background: #0d47a1;  /* Dark Blue */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    
+        .Iframe-container {
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .Iframe-container iframe {
+            width: 19.5%;
+        }
+    </style>
+    
+    
+
+
+
+    <script>
+        // Video sets for different sections
+        const videoSets = {
+            introduction: [
+                "ymn9jbEC3NE", "JoOJtVcOKxM", "1WEc8kZIs-8", "d5B8gNxedbY", "lwBvijahIY4"
+            ],
+            features: [
+                "Cg3jvey4Z0Q", "WD8FEvc8HTc", "Pzy0FkpHFIc", "DHY_TdgH63A", "QMbUSb60vPU"
+            ],
+            applications: [
+                "EhGTw7UEgQc", "OWJTBVZ9nwE", "6Tz5eqcaTO0", "csTdKU8xXiU", "tDeNBuS1eJI"
+            ],
+            gallery: [
+                "F0LtuM", "QxAZl6c", "l6P4JME", "wIMoh6I", "Xh4StQ8"
+            ]
+        };
+
+        function loadVideos(category) {
+            const videoContainer = document.getElementById("video-container");
+            videoContainer.innerHTML = ""; // Clear previous videos
+
+            videoSets[category].forEach(videoId => {
+                const iframe = document.createElement("iframe");
+                iframe.src = `https://www.youtube.com/embed/${videoId}`;
+                iframe.width = "19.5%";
+                iframe.height = "155";
+                iframe.frameBorder = "0";
+                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                iframe.allowFullscreen = true;
+                videoContainer.appendChild(iframe);
+            });
+        }
+
+        // Load default videos on page load
+        window.onload = () => loadVideos('introduction');
+    </script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Artificial Intelligence Revolution</h1>
+        <p>Offering resources, advice, and tools for remote workers and freelancers.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="loadVideos('introduction')">Introduction</a></li>
+            <li><a href="#" onclick="loadVideos('features')">Features</a></li>
+            <li><a href="#" onclick="loadVideos('applications')">Applications</a></li>
+            <li><a href="#" onclick="loadVideos('gallery')">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <div class="C2">
+        <div id="intro">
+            <h2>What is Remote Work and Freelancing</h2>
+            <p>Remote work and freelancing provide flexibility, allowing professionals to work from anywhere. With digital tools, freelancers manage projects, collaborate, and find global clients. This work model promotes independence, work-life balance, and increased productivity while reducing commute stress. Popular fields include writing, programming, marketing, and design.</p>
+            </div>
+
+        <button id="nextLink">More Info</button>
+    </div>
+
+    <script>
+        const links = [
+            "https://mostourigoatik.com/4/8421464",
+            "https://mostourigoatik.com/4/8436763",
+            "https://mostourigoatik.com/4/8436761"
+        ];
+
+        let index = 0;
+
+        document.getElementById("nextLink").addEventListener("click", function () {
+            window.open(links[index], "_blank");  // Open link in a new tab
+            index = (index + 1) % links.length;   // Cycle back to the first link after the last one
+        });
+    </script>
+
+
+    <section>
+    	<div id="video-container" class="Iframe-container"></div>
+    </section>
+
+    <section id="features">
+        <h2>Key Features of Remote Work and Freelancing</h2>
+        <ul>
+            <li>Flexible work schedules for better work-life balance.</li>
+            <li>Global job opportunities across various industries.</li>
+            <li>Access to digital tools for seamless communication and collaboration.</li>
+            <li>Independence and control over workload and earnings.</li>
+        </ul>
+        
+    </section>
+
+    <section id="applications">
+        <h2>Remote Work and Freelancing Applications</h2>
+        <p>Remote work and freelancing are widely applied in fields such as software development, content creation, digital marketing, and customer support, enabling businesses to hire global talent efficiently.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Remote Work and Freelancing in Action</h2>
+        <div class="image-gallery">
+            <img src="ai1.jpeg">
+            <img src="ai2.png">
+            <img src="ai3.png">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 - All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
